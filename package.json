@@ -8,16 +8,23 @@
     "frontend": "vite",
     "backend": "cd server && node --watch index.js",
     "build": "vite build",
+    "start": "node server/index.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.15.0",
+    "base64-img": "^1.0.4",
     "canvas-confetti": "^1.9.4",
     "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "framer-motion": "^12.38.0",
     "html2canvas": "^1.4.1",
     "lucide-react": "^1.8.0",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.1"
