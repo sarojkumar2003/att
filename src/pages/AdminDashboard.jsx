@@ -4,7 +4,7 @@ import { Calendar, Loader2, AlertCircle, RefreshCw, UserPlus, Clock, X, MapPin, 
 import AttendanceTable from '../components/AttendanceTable';
 import html2canvas from 'html2canvas';
 
-const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:5000')).replace(/\/api$/, '') + '/api';
+const API_URL = import.meta.env.MODE === 'production' ? '/api' : 'http://localhost:5000/api';
 
 export default function AdminDashboard() {
   const [history, setHistory] = useState([]);

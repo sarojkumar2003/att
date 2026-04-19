@@ -6,7 +6,7 @@ import AttendanceTable from '../components/AttendanceTable';
 import confetti from 'canvas-confetti';
 import html2canvas from 'html2canvas';
 
-const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:5000')).replace(/\/api$/, '') + '/api';
+const API_URL = import.meta.env.MODE === 'production' ? '/api' : 'http://localhost:5000/api';
 
 export default function Home() {
   const [employees, setEmployees] = useState([]);

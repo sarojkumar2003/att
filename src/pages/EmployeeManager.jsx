@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { UserPlus, Trash2, Loader2, Phone, BadgeCheck, Camera, Image, X } from 'lucide-react';
 
-const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:5000')).replace(/\/api$/, '') + '/api';
+const API_URL = import.meta.env.MODE === 'production' ? '/api' : 'http://localhost:5000/api';
 
 export default function EmployeeManager() {
   const [employees, setEmployees] = useState([]);
