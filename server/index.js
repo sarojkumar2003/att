@@ -282,7 +282,7 @@ app.delete('/api/attendance/cancel/:id', async (req, res) => {
 app.use(express.static(path.join(process.cwd(), 'dist')));
 
 // Handle SPA routing: Serve index.html for any unknown routes
-app.get('/*', (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
 });
 
